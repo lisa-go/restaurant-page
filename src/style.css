@@ -1,3 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 body {
-    background-color: grey;
+    font-family: 'Ubuntu', sans-serif;
+    background: url('./images/restaurant-kristian-angelo-unsplash.jpg');
+    background-size: 1900px;
+    background-repeat: no-repeat;
+    background-color: #040d0c;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0;
+    width: 100%;    
+} 
+
+.logo {
+    font-family: 'Pacifico';
+    font-size: 2.5rem;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    gap: 2.5rem;
+    background-color: #000000da;
+}
+
+.linkBar button {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border: none;
+    background: none;
+    color: #d3d3d3;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.linkBar button:hover {
+    transition: 1s;
+    color: white;
+    background-color: #4141419c;
+}
+
+.main {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    
+}
+
+.main .logo {
+    margin-top: 15%;
+    background-color: #000000da;
+    border-radius: 4rem;
+    padding: 0.5rem 2rem;
+}
+
+.intro {
+    font-family: 'Pacifico';
+    font-size: 2rem;
+    color: #e0e0e0;
+    background-color: #000000ee;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.mainBtn {
+    width: fit-content;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    color: #dadada;
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.mainBtn:hover {
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.918);
+    color: white;
+}
+
+.menu {
+    display: none;
+}
+
+
+.filter-bw {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(350deg) brightness(103%) contrast(101%);
 }
