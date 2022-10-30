@@ -1,4 +1,7 @@
+
+
 const menuPage = () => {
+    content.removeChild(content.children[1]);
     const menu = document.createElement('div');
     menu.classList.add('menu');
     content.appendChild(menu);

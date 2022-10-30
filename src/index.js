@@ -11,11 +11,6 @@ const tempTest = () => {
   console.log ('yes');
 }
 
-//* remove current content *//
-const changeContent = () => {
-  content.removeChild(content.children[1]);
-}
-
 //* header creation *//
 const header = document.createElement('div');
 header.classList.add('header');
@@ -37,7 +32,7 @@ content.appendChild(header);
     const btn1 = document.createElement('button');
     btn1.classList.add('link');
     btn1.textContent = 'Home';
-    btn1.onclick = changeContent;
+    btn1.onclick = homePage;
     buttonBar.appendChild(btn1);
 
     const btn2 = document.createElement('button');
@@ -87,6 +82,12 @@ main.style.display = 'flex';
   mainBtn.textContent = 'Make Your Reservation Now!';
   mainBtn.onclick = tempTest;
   main.appendChild(mainBtn);
+}
+
+//* clicking on home page *//
+function homePage() {
+  content.removeChild(content.children[1]);
+  mainPage();
 }
 
 mainPage();
