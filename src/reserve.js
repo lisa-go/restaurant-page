@@ -44,6 +44,79 @@ const reservePage = () => {
       rTop.appendChild(myRicon);
     
   //* reservation form creation *//
-    }
+  const formCont = document.createElement('formCont');
+  reCont.appendChild(formCont);
+
+    //* field 1 - name *//
+    const field1 = document.createElement('formfield');
+    formCont.appendChild(field1);
+
+    const label1 = document.createElement('label');
+    label1.htmlFor = 'name';
+    label1.textContent = '*Name: ';
+    field1.appendChild(label1);
+
+    const input1 = document.createElement('input');
+    input1.type = 'text';
+    input1.id = 'name';
+    input1.required = 'true';
+    field1.appendChild(input1);
+
+
+    //* field 2 - date time *//
+    const field2 = document.createElement('formfield');
+    formCont.appendChild(field2);
+
+    const label2 = document.createElement('label');
+    label2.htmlFor = 'datetime';
+    label2.textContent = '*Date & Time: ';
+    field2.appendChild(label2);
+
+    const input2 = document.createElement('input');
+    input2.type = 'datetime-local';
+    input2.id = 'datetime';
+    input2.required = 'true';
+    field2.appendChild(input2);
+
+
+    //* field 3 - group size *//
+    const field3 = document.createElement('formfield');
+    formCont.appendChild(field3);
+
+    const label3 = document.createElement('label');
+    label3.htmlFor = 'groupsize';
+    label3.textContent = '*Group Size: ';
+    field3.appendChild(label3);
+
+    const input3 = document.createElement('input');
+    input3.type = 'number';
+    input3.id = 'groupsize';
+    input3.required = 'true';
+    field3.appendChild(input3);
+
+
+    //* field 4 - phone number *//
+    const field4 = document.createElement('formfield');
+    formCont.appendChild(field4);
+
+    const label4 = document.createElement('label');
+    label4.htmlFor = 'phone';
+    label4.textContent = '*Contact Number: ';
+    field4.appendChild(label4);
+
+    const input4 = document.createElement('input');
+    input4.type = 'tel';
+    input4.id = 'phone';
+    input4.required = 'true';
+    field4.appendChild(input4);
+
+    
+    //* submit button *//
+    const formBtn = document.createElement('button');
+    formBtn.classList.add('formBtn');
+    formBtn.type = 'submit';
+    formBtn.textContent = 'Reserve';
+    formCont.appendChild(formBtn);
+}
 
 export default reservePage;
