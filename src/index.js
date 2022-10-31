@@ -1,15 +1,11 @@
 import './style.css';
 import icon from './images/icon.svg';
 import menuPage from './menu.js';
-
+import reservePage from './reserve';
+import locationPage from './location.js';
 
 
 const content = document.querySelector('#content');
-
-
-const tempTest = () => {
-  console.log ('yes');
-}
 
 //* header creation *//
 const header = document.createElement('div');
@@ -44,13 +40,13 @@ content.appendChild(header);
     const btn3 = document.createElement('button');
     btn3.classList.add('link');
     btn3.textContent = 'Reservations';
-    btn3.onclick = tempTest;
+    btn3.onclick = reservePage;
     buttonBar.appendChild(btn3);
 
     const btn4 = document.createElement('button');
     btn4.classList.add('link');
     btn4.textContent = 'Location';
-    btn4.onclick = tempTest;
+    btn4.onclick = locationPage;
     buttonBar.appendChild(btn4);
 
 
@@ -80,7 +76,7 @@ main.style.display = 'flex';
   const mainBtn = document.createElement('button');
   mainBtn.classList.add('mainBtn');
   mainBtn.textContent = 'Make Your Reservation Now!';
-  mainBtn.onclick = tempTest;
+  mainBtn.onclick = reservePage;
   main.appendChild(mainBtn);
 }
 
