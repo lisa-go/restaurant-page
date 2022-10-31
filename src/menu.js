@@ -5,9 +5,16 @@ import ent1icon from './images/bbq_noodles_wonton_soup-luke-lung-unsplash.jpg';
 import ent2icon from './images/grilled_noodle_bowl-loes-klinker-unsplash.jpg'
 import dr1icon from './images/coffee-demi-deherrera-unsplash.jpg';
 import dr2icon from './images/milktea-rachel-mcdermott-unsplash.jpg';
+import backgroundimage from './images/restaurant-kristian-angelo-unsplash.jpg';
+
 
 const menuPage = () => {
+  document.body.style.background = 'url(' + backgroundimage + ')';
+  document.body.style.backgroundSize = '1900px';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.backgroundColor = '#040d0c';
     content.removeChild(content.children[1]);
+    
     const menu = document.createElement('div');
     menu.classList.add('menu');
     content.appendChild(menu);

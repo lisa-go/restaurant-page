@@ -2,9 +2,6 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: url('./images/restaurant-kristian-angelo-unsplash.jpg');
-    background-size: 1900px;
-    background-repeat: no-repeat;
     background-color: #040d0c;
     margin: 0;
     padding: 0;
@@ -63,7 +60,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8rem;
-    
 }
 
 .main .logo {
@@ -187,6 +183,38 @@ menuPrice {
 
 .reserve {
     display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.reserveContainer {
+    margin: 1rem 2rem;
+    width: clamp(400px, 60%, 700px);
+    background-color: #000000be;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.reserve .pHeader {
+    margin-top: -1.9rem;
+}
+
+.myRicon {
+    width: 48px;
+    height: 48px;
+    margin-top: -0.9rem;
 }
 
 .filter-bw {

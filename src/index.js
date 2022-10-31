@@ -3,6 +3,7 @@ import icon from './images/icon.svg';
 import menuPage from './menu.js';
 import reservePage from './reserve';
 import locationPage from './location.js';
+import backgroundimage from './images/restaurant-kristian-angelo-unsplash.jpg';
 
 
 const content = document.querySelector('#content');
@@ -52,6 +53,11 @@ content.appendChild(header);
 
 //* main page* //
 function mainPage() {
+  document.body.style.background = 'url(' + backgroundimage + ')';
+  document.body.style.backgroundSize = '1900px';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.backgroundColor = '#040d0c';
+
 const main = document.createElement('div');
 main.classList.add('main');
 content.appendChild(main);
@@ -82,6 +88,11 @@ main.style.display = 'flex';
 
 //* clicking on home page *//
 function homePage() {
+  document.body.style.background = 'url(' + backgroundimage + ')';
+  document.body.style.backgroundSize = '1900px';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.backgroundColor = '#040d0c';
+  
   content.removeChild(content.children[1]);
   mainPage();
 }
