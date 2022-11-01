@@ -2,9 +2,8 @@ import './style.css';
 import icon from './images/icon.svg';
 import menuPage from './menu.js';
 import reservePage from './reserve';
-import locationPage from './location.js';
 import backgroundimage from './images/restaurant-kristian-angelo-unsplash.jpg';
-
+import gitimg from './images/github.svg';
 
 const content = document.querySelector('#content');
 
@@ -18,7 +17,11 @@ content.appendChild(header);
   myIcon.src = icon;
   myIcon.classList.add('filter-bw');
   myIcon.style.objectFit = 'contain';
-  header.appendChild(myIcon);
+  myIcon.onclick = homePage;
+  const topLink = document.createElement('a');
+  topLink.id = 'top';
+  header.appendChild(topLink);
+  topLink.appendChild(myIcon);
 
   //* button bar creation *//
   const buttonBar = document.createElement('div');
@@ -46,9 +49,11 @@ content.appendChild(header);
 
     const btn4 = document.createElement('button');
     btn4.classList.add('link');
-    btn4.textContent = 'Location';
-    btn4.onclick = locationPage;
     buttonBar.appendChild(btn4);
+        const btn4link = document.createElement('a');
+        btn4link.href = '#location';
+        btn4link.textContent = 'Location';
+        btn4.appendChild(btn4link);
 
 
 //* main page* //
@@ -57,6 +62,7 @@ function mainPage() {
   document.body.style.backgroundSize = '1900px';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundColor = '#040d0c';
+  document.body.style.backgroundAttachment = 'fixed';
 
 const main = document.createElement('div');
 main.classList.add('main');
@@ -92,9 +98,52 @@ function homePage() {
   document.body.style.backgroundSize = '1900px';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundColor = '#040d0c';
-  
+  document.body.style.backgroundAttachment = 'fixed';
+
   content.removeChild(content.children[1]);
   mainPage();
 }
 
+//* location creation *//
+const loCont = document.createElement('loCont')
+document.body.appendChild(loCont);
+const loText = document.createElement('loText');
+loCont.appendChild(loText);
+const loHeader = document.createElement('a');
+loHeader.id = 'location';
+loHeader.textContent = 'Location Details';
+loText.appendChild(loHeader);
+const loPh = document.createElement('div');
+loPh.textContent = 'Phone: 012 - 345 - 6789';
+loText.appendChild(loPh);
+const loAdd = document.createElement('div');
+loAdd.textContent = 'Address: Houston, TX'
+loText.appendChild(loAdd);
+const goTop = document.createElement('a');
+goTop.classList.add('goTop');
+goTop.href = '#top';
+goTop.textContent = ' ^ Go to top';
+loText.appendChild(goTop);
+
+const loMap = document.createElement('iframe');
+loMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d886188.2397363144!2d-95.96171784552766!3d29.815995521526638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1667270394329!5m2!1sen!2sus';
+loMap.width = '400px';
+loMap.height = '260px';
+loCont.appendChild(loMap);
+
+
+  //* footer creation *//
+  const footer = document.createElement('footer');
+  const giticon = new Image();
+  giticon.src = gitimg;
+  giticon.classList.add('filter-bw');
+  document.body.appendChild(footer);
+  footer.appendChild(giticon);
+  const footerText = document.createElement('a');
+  footerText.href = 'https://github.com/lisa-go';
+  footerText.textContent = 'Website by Lisa';
+  footer.appendChild(footerText);
+
+
 mainPage();
+

@@ -13,6 +13,7 @@ const menuPage = () => {
   document.body.style.backgroundSize = '1900px';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundColor = '#040d0c';
+  document.body.style.backgroundAttachment = 'fixed';
     content.removeChild(content.children[1]);
     
     const menu = document.createElement('div');
